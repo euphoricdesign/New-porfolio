@@ -1,0 +1,260 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    font-family: 'Montserrat', sans-serif;
+    background-color: black;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.content {
+    padding-left: 160px;
+}
+
+
+#hero {
+    background-image: url(img/hero.jpeg);
+    background-size: cover;
+    /* background-position: top center; */
+    position: relative;
+    z-index: 1;
+}
+
+#hero::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: .5;
+    z-index: -1;
+}
+
+#hero h1 {
+    display: block;
+    width: fit-content;
+    font-size: 4rem;
+    position: relative;
+    color: transparent;
+    animation: text_reveal 1s ease forwards;
+    animation-delay: 1s;
+}
+
+#hero h1:nth-child(1) {
+    animation-delay: 1s;
+}
+
+#hero h1:nth-child(2) {
+    animation-delay: 2s;
+}
+
+#hero h1:nth-child(3) {
+    animation: text_reveal_name .5s ease forwards;
+    animation-delay: 3s;
+}
+
+#hero h1 span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: #8C5E58;
+    animation: text_reveal_box 1s ease;
+    animation-delay: .3s;
+}
+
+#hero h1:nth-child(1) span {
+    animation-delay: .5s;
+}
+
+#hero h1:nth-child(2) span {
+    animation-delay: 1.5s;
+}
+
+#hero h1:nth-child(3) span {
+    animation-delay: 2.5s;
+}
+
+#hero .cta {
+    display: inline-block;
+    padding: 10px 30px;
+    color: white;
+    background-color: transparent;
+    border: 2px solid #8C5E58;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 30px;
+    transition: .3s ease;
+    transition-property: background-color, color;
+}
+
+#hero .cta:hover {
+    color: white;
+    background-color: #8C5E58;
+}
+
+/* End hero section */
+
+
+/* Skills */
+.skills {
+    height: 600px;
+    padding: 2% 10% 0px 10%;
+}
+
+.skills-text p:nth-child(1) {
+    font-weight: bold;
+    color: #FFA69E;
+    font-size: 30px;
+    margin-bottom: 10px;
+    text-align: center;
+    
+}
+
+.skills-text p:nth-child(2) {
+    font-weight: normal;
+    color: #FFF7F8;
+    font-size: 12px;
+    text-align: center;
+    width: 500px;
+    margin: auto;
+}
+
+.skills-text {
+    /* width: 500px; */
+    margin: 50px 0;
+}
+
+.box-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.box-1, .box-2, .box-3 {
+    width: 300px;
+    height: 320px;
+    background-color: transparent;
+    border: 1px solid #FFA69E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 10px;
+}
+
+.box-1 span,
+.box-2 span,
+.box-3 span {
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-1 span {
+    color: rgb(218, 58, 0);
+}
+
+.box-2 span {
+    color: rgb(13, 92, 238);
+}
+
+.box-3 span {
+    color: rgb(63, 6, 104);
+}
+
+.box-1 p:nth-child(2) ,
+.box-2 p:nth-child(2) ,
+.box-3 p:nth-child(2) {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px 0;
+}
+
+.box-1 p:nth-child(3) ,
+.box-2 p:nth-child(3) ,
+.box-3 p:nth-child(3) {
+    color: white;
+    text-align: center;
+    width: 230px;
+    margin: 0 0 20px 0;
+    font-size: 12px;
+}
+
+.box-1 button,
+.box-2 button,
+.box-3 button {
+    width: 100px;
+    height: 30px;
+    color: white;
+    background-color: transparent;
+    border: 2px solid #FFA69E;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    transition: .3s ease;
+    transition-property: background-color, color;
+}
+
+.box-1 button:hover,
+.box-2 button:hover,
+.box-3 button:hover {
+    color: white;
+    background-color: #FFA69E;
+}
+
+
+
+
+
+
+/* End Skills */
+/* Keyframes */
+
+@keyframes text_reveal_box {
+    50% {
+        width: 100%;
+        left: 0;
+    }
+
+    100% {
+        width: 0;
+        left: 100%;
+    }
+}
+
+@keyframes text_reveal {
+    100% {
+        color: white;
+    }
+}
+
+@keyframes text_reveal_name {
+    100% {
+        color: #8C5E58;
+        font-weight: 600;
+    }
+}
+
+/* End Keyframes */
