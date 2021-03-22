@@ -259,13 +259,17 @@ p {
     text-transform: uppercase;
     letter-spacing: .1rem;
     margin-top: 30px;
-    transition: .3s ease;
-    transition-property: background-color, color;
+    transition: .3s;
+    overflow: hidden;
+    /* transition-property: background-color, color; */
 }
 
 #hero .cta:hover {
     color: white;
     background-color: var(--color-first);
+    box-shadow: 0 0 0px var(--color-first), 0 0 10px var(--color-first),
+    0 0 50px var(--color-first);
+    transition-delay: .5;
 }
 
 /* End hero section */
@@ -366,13 +370,15 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     cursor: pointer;
     transition: all 0.5s ease-in-out;
 }
 .icons li:hover{
     background: #edffec;
     color: var(--color-first);
+    box-shadow:2px 2px 12px rgb(77, 73, 73);
+    transition:all ease 0.5s;
 }
 .about-right{
     background: #1a1c1d;
@@ -409,16 +415,16 @@ p {
     width: 130px;
     background: transparent;
     cursor: pointer;
-    transition: .3s ease;
-    transition-property: background-color, color;
+    transition: .3s;
+    overflow: hidden;
     color: white;
 }
-.btn.btn-white{
-    transition: all 0.5s ease-in-out;
-}
+
 .btn.btn-white:hover{
     background: var(--color-first);
     color: white;
+    box-shadow: 0 0 0px var(--color-first), 0 0 10px var(--color-first), 0 0 50px var(--color-first);
+    transition-delay: .5;
 }
 .about-para p{
     font-weight: 300;
@@ -534,7 +540,7 @@ p {
 
 /* Contact */ 
 
-#contact {
+/* #contact {
     height: 100%;
     padding: 0% 10% 0px 10%;
 }
@@ -652,8 +658,121 @@ p {
     font-size: 16px;
     font-weight: 500;
 
+} */
+
+#contact h1 {
+    font-size: 2.5rem;
+    color: var(--color-first);
+    margin: 10px;
+    padding: 30px 5px 5px 5px;
+    letter-spacing: 4px;
+    border-bottom:2px solid var(--color-first);
+}
+
+#contact {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    background-color: black;
+    margin: 20px 0;
+    height: 70vh;
+}
+
+#contact a {
+    border: none;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    border: 2px solid var(--color-first);
+    padding: 10px;
+    margin: 40px;
+    width: 130px;
+    background: transparent;
+    transition: .3s;
+    overflow: hidden;
+    color: white;
+}
+
+#contact a:hover {
+    background: var(--color-first);
+    color: white;
+    box-shadow: 0 0 0px var(--color-first), 0 0 10px var(--color-first), 0 0 50px var(--color-first);
+    transition-delay: .5;
 }
 /* End Contact */
+
+/* Footer */
+footer p:nth-child(1) {
+    font-size: 3rem;
+    color: var(--color-first);
+    line-height: 10px;
+    font-weight: 600;
+}
+
+footer p:nth-child(2) {
+    font-size: 1.6rem;
+    color: #424242;
+    width: 600px;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+footer {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: #0d0d0d;
+}
+
+.social-icons-footer a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-first);
+    margin: 20px 10px;
+    border-radius: 50%;
+}
+
+.social-icons-footer {
+    display: flex;
+}
+
+.social-icons-footer i {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.social-icons-footer a:hover {
+    background-color: white;
+    box-shadow:2px 2px 12px rgb(77, 73, 73);
+	transition:all ease 0.5s;
+}
+
+.social-icons-footer a:hover i {
+    color: var(--color-first);
+    transition: all ease 0.5s;
+}
+
+.copyright {
+    color: #424242;
+    font-size: 1.2rem;
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+
+}
+
+
+/* End Footer */
 
 
 /* Keyframes */
@@ -747,10 +866,12 @@ p {
 
 /* Media Querys for tablets and mobile */
 
-@media screen and (max-width:1024px) {
+@media screen and (max-width:1000px) {
     .skills-box {
         width: calc((100% / 3) - 30px);
     }
+
+    
 }
 
 @media screen and (max-width:900px) {
@@ -774,6 +895,10 @@ p {
     .center {
         height: 90vh;
     }
+
+    footer p:nth-child(2){
+		width: 90%;
+	}
 }
 
 @media screen and (max-width:600px) {
@@ -807,6 +932,11 @@ p {
     .contact {
         margin-top: 10px;
     }
+
+    #contact h1 {
+        text-align: center;
+        border: none;
+    }
 }
 
 @media screen and (max-width:500px) {
@@ -818,6 +948,8 @@ p {
     .center {
         width: 50%;
     }
+
+    
 }
 
 @media screen and (max-width:400px) {
