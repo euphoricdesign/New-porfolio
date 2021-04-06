@@ -15,3 +15,21 @@ document.addEventListener('scroll', () => {
 		header.style.backgroundColor = 'transparent';
 	}
 });
+
+window.onscroll = function(){
+    if(document.documentElement.scrollTop > 600){
+        document.querySelector('.scrollup-content')
+        .classList.add('show2');
+    }else{
+        document.querySelector('.scrollup-content')
+        .classList.remove('show2');
+    }
+}
+
+document.querySelector('.scrollup-content')
+.addEventListener('click', () =>{
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
