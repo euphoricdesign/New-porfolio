@@ -34,7 +34,7 @@ p {
 }
 
 .content {
-    padding-left: 160px;
+    padding-left: 80px;
 }
 
 /* Header */
@@ -208,7 +208,7 @@ p {
 #hero h1 {
     display: block;
     width: fit-content;
-    font-size: 4.4rem;
+    font-size: 4.5rem;
     position: relative;
     color: transparent;
     animation: text_reveal 1s ease forwards;
@@ -943,6 +943,28 @@ footer {
 
 /* Media Querys for desktop*/ 
 
+@media screen and (min-width: 1440px) {
+    .nav-list {
+        position: relative;
+        left: 130px;
+    }
+
+    #hero h1 {
+        font-size: 5rem;
+    }
+
+    .projects-container {
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 30px;
+        justify-content: center;
+    }
+
+    .figure {
+        margin: 0 50px;
+    }
+}
+
 @media screen and (min-width: 1024px) {
 	#header .hamburger {
 		display: none;
@@ -1010,9 +1032,9 @@ footer {
 }
 
 @media screen and (max-width:800px) {
-    .content {
+    /* .content {
         padding: 0 100px;
-    }
+    } */
 
     .skills-box {
         width: calc((100% / 2) - 30px);
@@ -1094,7 +1116,7 @@ footer {
     }
 
     #hero h1 {
-        font-size: 3.5rem;
+        font-size: 3.8rem;
     }
 
     #hero .cta {
@@ -1106,7 +1128,7 @@ footer {
 
 @media only screen and (max-width: 450px) and (min-width: 401px) {
     #hero h1 {
-        font-size: 2.8rem;
+        font-size: 4rem;
     }
 }
 
