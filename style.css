@@ -208,7 +208,7 @@ p {
 #hero h1 {
     display: block;
     width: fit-content;
-    font-size: 4.5rem;
+    font-size: 4.6rem;
     position: relative;
     color: transparent;
     animation: text_reveal 1s ease forwards;
@@ -362,7 +362,16 @@ p {
     justify-content: center;
     padding: 0.8rem 0;
 }
-.icons li{
+
+.icons li a{
+    color: white;
+}
+
+.icons li a:hover {
+    color: var(--color-first);
+}
+
+.icons li {
     list-style-type: none;
     background: var(--color-first);
     color: #fff;
@@ -741,7 +750,8 @@ p {
     letter-spacing: 2px;
     margin-top: 20px;
 }
-.contact .box-contact .content h4 {
+.contact .box-contact .content h4,
+.contact .box-contact .content a {
     color: white;
     font-size: 16px;
     font-weight: 500;
@@ -1045,6 +1055,11 @@ footer {
     .contact .box-contact {
         height: 180px;
     }
+
+    .skills {
+        height: 100%;
+    }
+    
 }
 
 @media screen and (max-width:700px) {
@@ -1123,7 +1138,17 @@ footer {
         font-size: 1.8rem;
     }
 
+    .box-container {
+        margin-top: 0;
+    }
+
+    .skills-box:hover::before {
+        transform: none;
+    }
     
+    .skills-box:hover::after {
+        transform: none;
+    }
 }
 
 @media only screen and (max-width: 450px) and (min-width: 401px) {
@@ -1168,6 +1193,7 @@ footer {
         width: 90%;
         border-radius: 5px;
         margin: 0 15px;
+        padding-bottom: 60px;
     }
 
     .contact-text {
